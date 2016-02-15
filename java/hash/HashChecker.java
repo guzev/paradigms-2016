@@ -61,7 +61,7 @@ public class HashChecker extends MainChecker {
         return this;
     }
 
-    private String randomString(final int length) {
+    protected String randomString(final int length) {
         final StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             sb.append((char) random.nextInt());

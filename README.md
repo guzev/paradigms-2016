@@ -6,6 +6,12 @@
 Домашнее задание 1. Хэширование
 ----
 
+Модификации
+ * *Простая*
+    * Класс должен иметь имя `CalcSHA256` и подсчитывать [SHA-256](https://en.wikipedia.org/wiki/Secure_Hash_Algorithm)
+    * [Исходный код тестов](java/hash/CalcSHA256Test.java)
+    * [Откомпилированные тесты](artifacts/hash/CalcSHA256Test.jar)
+
 Для того, чтобы протестировать исходную программу:
 
  1. Скачайте тесты ([CalcMD5Test.jar](artifacts/hash/CalcMD5Test.jar))
