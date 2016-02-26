@@ -3,9 +3,19 @@
 
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/java-intro/homeworks.html)
 
+Домашнее задание 3. Очередь на массиве
+---
+Модификации
+ * *Базовая*
+    * [Исходный код тестов](java/queue/ArrayQueueTest.java)
+    * [Откомпилированные тесты](artifacts/queue/ArrayQueueTest.jar)
+
 Домашнее задание 2. Бинарный поиск
 ----
 Модификации
+ * *Базовая*
+    * [Исходный код тестов](java/search/BinarySearchTest.java)
+    * [Откомпилированные тесты](artifacts/search/BinarySearchTest.jar)
  * *Простая*
     * Если в массиве `a` отсутствует элемент, равный `x`, то требуется
       вывести индекс вставки в формате, определенном в 
@@ -22,9 +32,6 @@
     * Класс должен иметь имя `BinarySearchSpan`
     * [Исходный код тестов](java/search/BinarySearchSpanTest.java)
     * [Откомпилированные тесты](artifacts/search/BinarySearchSpanTest.jar)
- * *Базовая*
-    * [Исходный код тестов](java/search/BinarySearchTest.java)
-    * [Откомпилированные тесты](artifacts/search/BinarySearchTest.jar)
 
 Домашнее задание 1. Хэширование
 ----
