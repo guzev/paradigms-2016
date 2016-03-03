@@ -7,14 +7,21 @@
 ---
 Модификации
  * *Базовая*
-    * [Исходный код тестов](java/queue/ArrayQueueTest.java)
-    * [Откомпилированные тесты](artifacts/queue/ArrayQueueTest.jar)
+    * [Исходный код тестов](java/ArrayQueueTest.java)
+    * [Откомпилированные тесты](artifacts/ArrayQueueTest.jar)
  * *Простая*
     * Реализовать метод `toArray`, возвращающий массив,
       содержащий элементы, лежащие в очереди в порядке
       от головы к хвосту.
-    * [Исходный код тестов](java/queue/ArrayQueueToArrayTest.java)
-    * [Откомпилированные тесты](artifacts/queue/ArrayQueueToArrayTest.jar)
+    * [Исходный код тестов](java/ArrayQueueToArrayTest.java)
+    * [Откомпилированные тесты](artifacts/ArrayQueueToArrayTest.jar)
+ * *Усложненная*
+    * Реализовать методы
+        * `push` – добавить элемент в начало очереди
+        * `peek` – вернуть последний элемент в очереди
+        * `remove` – удалить последний элемент из очереди 
+    * [Исходный код тестов](java/ArrayQueueDequeTest.java)
+    * [Откомпилированные тесты](artifacts/ArrayQueueDequeTest.jar)
 
 Домашнее задание 2. Бинарный поиск
 ----
