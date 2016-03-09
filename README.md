@@ -19,7 +19,7 @@
     * Взаимный порядок элементов должен сохраняться
     * Дублирования кода быть не должно
     * [Исходный код тестов](java/queue/QueueFunctions.java)
-    * [Откомпилированные тесты](artifacts/queue/QueueFunctions.jar)
+    * [Откомпилированные тесты](artifacts/queue/QueueFunctionsTest.jar)
 
 Домашнее задание 3. Очередь на массиве
 ---
