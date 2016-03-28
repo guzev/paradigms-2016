@@ -14,6 +14,11 @@
     * Нельзя использовать типы `long` и `double`
     * Нельзя использовать методы классов `Math` и `StrictMath`
     * [Исходный код тестов](java/expression/exceptions/ExceptionsTest.java)
+ * *Простая*
+    * Дополнительно реализовать унарные операции:
+        * `abs` — модуль числа, `abs -5` равно 5;
+        * `sqrt` — квадратный корень, `sqrt 25` равно 5.
+    * [Исходный код тестов](java/expression/exceptions/ExceptionsEasyTest.java)
 
 Домашнее задание 5. Вычисление выражений
 ---
