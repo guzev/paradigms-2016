@@ -13,3 +13,9 @@ include("examples/functions.js");
 include("examples/objects.js");
 include("examples/closures.js");
 include("examples/stacks.js");
+
+// Lecture 3
+include("examples/errors.js");
+include("examples/no.js");
+include("examples/types-2.js");
+include("examples/properties.js");
