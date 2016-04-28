@@ -5,6 +5,12 @@
 
 Домашнее задание 9. Объектные выражения на JavaScript
 ---
+ * *Модификация*. Дополнительное реализовать поддержку:
+    * унарных операций:
+        * `Sin` (`sin`) — синус, `4846147 sin` примерно равно 1;
+        * `Cos` (`cos`) — косинус, `5419351 cos` примерно равно 1;
+    * [Исходный код тестов](javascript/test/ModifiedObjectExpressionTest.java)
+        * Запускать c аргументом `easy`, `hard` или `bonus`
  * *Базовая*
     * Код должен находиться в файле `objectExpression.js`.
     * [Исходный код тестов](javascript/test/ObjectExpressionTest.java)
