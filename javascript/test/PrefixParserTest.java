@@ -1,5 +1,7 @@
 package test;
 
+import static expression.Util.randomInt;
+
 /**
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */
@@ -12,12 +14,12 @@ public class PrefixParserTest extends ObjectExpressionTest {
     );
 
     protected PrefixParserTest(final boolean hard) {
-        this(hard, new ExpressionTest.ArithmeticLanguage(OBJECT, PREFIX, ObjectExpressionTest.OPS));
+        this(hard, new ExpressionTest.ArithmeticLanguage(OBJECT, PREFIX, ObjectExpressionTest.OPS), "prefix");
     }
 
-    public PrefixParserTest(final boolean testParsing, final Language language) {
+    public PrefixParserTest(final boolean testParsing, final Language language, final String toString) {
         super(testParsing, false, language);
-        engine.toStringMethod = "prefix";
+        engine.toStringMethod = toString;
     }
 
     @Override
@@ -30,17 +32,17 @@ public class PrefixParserTest extends ObjectExpressionTest {
         super.test(parsed, unparsed);
         super.test(removeSpaces(parsed), unparsed);
 
-//        for (int i = 0; i < 1 + Math.min(10, 200 / unparsed.length()); i++) {
-//            final int index = randomInt(unparsed.length());
-//            final char c = unparsed.charAt(index);
-//            if (!Character.isDigit(c) && !Character.isWhitespace(c) && c != '-'){
-//                assertParsingError(unparsed.substring(0, index), "<SYMBOL REMOVED>", unparsed.substring(index + 1));
-//            }
-//            final char newC = INSERTIONS.charAt(randomInt(INSERTIONS.length()));
-//            if (!Character.isDigit(c)) {
-////                assertParsingError(unparsed.substring(0, index), "<SYMBOL INSERTED -->", newC + unparsed.substring(index));
-//            }
-//        }
+        for (int i = 0; i < 1 + Math.min(10, 200 / unparsed.length()); i++) {
+            final int index = randomInt(unparsed.length());
+            final char c = unparsed.charAt(index);
+            if (!Character.isDigit(c) && !Character.isWhitespace(c) && c != '-'){
+                assertParsingError(unparsed.substring(0, index), "<SYMBOL REMOVED>", unparsed.substring(index + 1));
+            }
+            final char newC = INSERTIONS.charAt(randomInt(INSERTIONS.length()));
+            if (!Character.isDigit(c) && c != '-') {
+                assertParsingError(unparsed.substring(0, index), "<SYMBOL INSERTED -->", newC + unparsed.substring(index));
+            }
+        }
     }
 
     private String removeSpaces(final String expression) {

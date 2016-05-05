@@ -16,7 +16,7 @@ import static expression.Util.*;
  */
 public abstract class BaseTest<E extends Engine> {
     public static final int N = 5;
-    public static final double EPS = 1e-6;
+    public static final double EPS = 1e-5;
 
     protected final E engine;
     protected final Language language;

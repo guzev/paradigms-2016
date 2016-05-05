@@ -6,12 +6,16 @@ import static expression.Util.list;
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */
 public class ModifiedPrefixParserTest extends PrefixParserTest {
-    private static final Ops OPS = ModifiedObjectExpressionTest.OPS
+    protected static final Ops OPS = ModifiedObjectExpressionTest.OPS
             .unary("atan", "ArcTan", "atan", StrictMath::atan)
             .unary("exp", "Exp", "exp", StrictMath::exp);
 
     protected ModifiedPrefixParserTest(final boolean hard) {
-        super(hard, new AdvancedLanguage(OBJECT, PREFIX, OPS));
+        super(hard, new AdvancedLanguage(OBJECT, PREFIX, OPS), "prefix");
+    }
+
+    protected ModifiedPrefixParserTest(final boolean testParsing, final Language language, final String toString) {
+        super(testParsing, language, toString);
     }
 
     @Override
@@ -49,16 +53,12 @@ public class ModifiedPrefixParserTest extends PrefixParserTest {
         public AdvancedLanguage(final Dialect parsed, final Dialect unparsed, final Ops ops) {
             super(parsed, unparsed, ops);
 
-            System.out.println(n("+", vx, vy, vz).parsed);
             tests.addAll(list(
                     u("exp", b("+", vx, vy)),
                     u("exp", b("/", u("exp", vz), b("+", vx, vy))),
                     u("atan", b("-", vx, vy)),
                     u("exp", b("+", vx, vy)),
-                    u("atan", b("/", u("atan", vz), b("+", vx, vy))),
-                    n("+", vx, vy, vz),
-                    n("-", vx, vy, vz),
-                    n("-", vx, vy, vz, vx)
+                    u("atan", b("/", u("atan", vz), b("+", vx, vy)))
             ));
         }
     }
