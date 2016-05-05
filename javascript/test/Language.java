@@ -87,8 +87,8 @@ public class Language {
 
     protected <T> BaseTest.Expr<T> nary(final BaseTest.Expr<BinaryOperator<T>> op, final List<BaseTest.Expr<T>> ts) {
         return expr(
-                parsed.nary(op.parsed, Util.map(ts, t -> t.unparsed)),
-                unparsed.nary(op.unparsed, Util.map(ts, t -> t.parsed)),
+                parsed.nary(op.parsed, Util.map(ts, t -> t.parsed)),
+                unparsed.nary(op.unparsed, Util.map(ts, t -> t.unparsed)),
                 ts.stream().map(t -> t.answer).reduce(op.answer).get()
         );
     }

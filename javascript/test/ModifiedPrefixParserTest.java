@@ -49,6 +49,7 @@ public class ModifiedPrefixParserTest extends PrefixParserTest {
         public AdvancedLanguage(final Dialect parsed, final Dialect unparsed, final Ops ops) {
             super(parsed, unparsed, ops);
 
+            System.out.println(n("+", vx, vy, vz).parsed);
             tests.addAll(list(
                     u("exp", b("+", vx, vy)),
                     u("exp", b("/", u("exp", vz), b("+", vx, vy))),
