@@ -5,6 +5,12 @@
 
 Домашнее задание 10. Обработка ошибок на JavaScript
 ---
+ * *Модификация*. Дополнительное реализовать поддержку:
+    * унарных операций:
+        * `Exp` (`exp`) — экспонента, `(exp 0)` равно 1;
+        * `ArcTan` (`atan`) — арктангенс, `(atan 0)` равно 0;
+    * [Исходный код тестов](javascript/test/ModifiedPrefixParserTest.java)
+        * Запускать c аргументом `easy` или `hard`
  * *Базовая*
     * Код должен находиться в файле `objectExpression.js`.
     * [Исходный код тестов](javascript/test/PrefixParserTest.java)

@@ -6,7 +6,7 @@ import static expression.Util.list;
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */
 public class ModifiedPrefixParserTest extends PrefixParserTest {
-    public static final Ops OPS = ModifiedObjectExpressionTest.OPS
+    private static final Ops OPS = ModifiedObjectExpressionTest.OPS
             .unary("atan", "ArcTan", "atan", StrictMath::atan)
             .unary("exp", "Exp", "exp", StrictMath::exp);
 
@@ -54,7 +54,10 @@ public class ModifiedPrefixParserTest extends PrefixParserTest {
                     u("exp", b("/", u("exp", vz), b("+", vx, vy))),
                     u("atan", b("-", vx, vy)),
                     u("exp", b("+", vx, vy)),
-                    u("atan", b("/", u("atan", vz), b("+", vx, vy)))
+                    u("atan", b("/", u("atan", vz), b("+", vx, vy))),
+                    n("+", vx, vy, vz),
+                    n("-", vx, vy, vz),
+                    n("-", vx, vy, vz, vx)
             ));
         }
     }
