@@ -3,6 +3,21 @@
 
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/java-intro/homeworks.html)
 
+Исходный код к лекции по Clojure
+----
+* [Скрипт с примерами](clojure/script.clj)
+    * [Введение](clojure/examples/intro.clj)
+    * [Функции](clojure/examples/functions.clj)
+    * [Списки](clojure/examples/lists.clj)
+    * [Отображения](clojure/examples/maps.clj)
+    * [Разбор](clojure/examples/read.clj)
+    * [Функции высшего порядка](clojure/examples/functions-2.clj)
+    * [Операции над векторам и матрицами](clojure/examples/vector-operations.clj)
+* Запуск из консоли [под Windows](clojure/RunClojure.cmd), 
+    [под *nix](clojure/RunClojure.sh)
+
+            RunClojure script.clj
+
 Домашнее задание 10. Обработка ошибок на JavaScript
 ---
  * *Модификация 1*. Дополнительное реализовать поддержку:
