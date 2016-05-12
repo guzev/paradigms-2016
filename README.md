@@ -5,6 +5,12 @@
 
 Домашнее задание 11. Выражения на Clojure
 ---
+ * *Модификация*. Дополнительное реализовать поддержку:
+    * унарных операций:
+        * `cin` (`sin`) — синус, `(sin 4846147)` примерно равно 1;
+        * `cos` (`cos`) — косинус, `(cos 5419351)` примерно равно 1;
+    * [Исходный код тестов](clojure/test/ModifiedClojureFunctionExpressionTest.java)
+        * Запускать c аргументом `easy` или `hard`
  * *Базовая*
     * Код должен находиться в файле `expression.clj`.
     * [Исходный код тестов](clojure/test/ClojureFunctionExpressionTest.java)
