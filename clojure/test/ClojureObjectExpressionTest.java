@@ -66,7 +66,7 @@ public class ClojureObjectExpressionTest extends ClojureFunctionExpressionTest {
                     for (int k = 1; k <= N; k += 1) {
                         final double dk = variable == 2 ? D : 0;
                         final double expected = (test.answer.evaluate(i + di, j + dj, k + dk) - test.answer.evaluate(i - di, j - dj, k - dk)) / D / 2;
-                        evaluate(new double[]{i, j, k}, expected, 1e-5);
+                        evaluate(new double[]{i, j, k}, expected, 1e-4);
                     }
                 }
             }
