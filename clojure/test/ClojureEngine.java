@@ -53,7 +53,7 @@ public class ClojureEngine implements Engine {
         final Object map = HASH_MAP.invoke("x", vars[0], "y", vars[1], "z", vars[2]);
         final String context = String.format("(%sexpr %s)\nwhere expr = %s", evaluateString, map, expression);
         if (evaluate.isPresent()) {
-            return invoke(evaluate.get(), new Object[]{parsed, map}, Number.class, context);
+            return invoke( evaluate.get(), new Object[]{parsed, map}, Number.class, context );
         } else {
             return invoke(parsed, new Object[]{map}, Number.class, context);
         }
