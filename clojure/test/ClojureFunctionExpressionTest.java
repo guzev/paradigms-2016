@@ -25,7 +25,7 @@ public class ClojureFunctionExpressionTest extends BaseTest<ClojureEngine> {
     public static final Dialect PARSED = dialect(
             "%s",
             "%s.0",
-            (op, args) -> "("+ op + " " + String.join(" ", args) + ",)"
+            (op, args) -> "("+ op + " " + String.join(", ", args) + ")"
     );
     protected final boolean testMultiarg;
 
